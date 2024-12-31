@@ -44,7 +44,7 @@ The app will already be a Spring Boot app with a valid application.properties an
 
 # User Stories
 
-## 1: Our API should be able to process new User registrations.
+## 1: Our API should be able to process new User registrations. DONE
 
 As a user, I should be able to create a new Account on the endpoint POST localhost:8080/register. The body will contain a representation of a JSON Account, but will not contain an accountId.
 
@@ -52,7 +52,7 @@ As a user, I should be able to create a new Account on the endpoint POST localho
 - If the registration is not successful due to a duplicate username, the response status should be 409. (Conflict)
 - If the registration is not successful for some other reason, the response status should be 400. (Client error)
 
-## 2: Our API should be able to process User logins.
+## 2: Our API should be able to process User logins. DONE
 
 As a user, I should be able to verify my login on the endpoint POST localhost:8080/login. The request body will contain a JSON representation of an Account.
 
@@ -60,14 +60,14 @@ As a user, I should be able to verify my login on the endpoint POST localhost:80
 - If the login is not successful, the response status should be 401. (Unauthorized)
 
 
-## 3: Our API should be able to process the creation of new messages.
+## 3: Our API should be able to process the creation of new messages. DONE
 
 As a user, I should be able to submit a new post on the endpoint POST localhost:8080/messages. The request body will contain a JSON representation of a message, which should be persisted to the database, but will not contain a messageId.
 
 - The creation of the message will be successful if and only if the messageText is not blank, is not over 255 characters, and postedBy refers to a real, existing user. If successful, the response body should contain a JSON of the message, including its messageId. The response status should be 200, which is the default. The new message should be persisted to the database.
 - If the creation of the message is not successful, the response status should be 400. (Client error)
 
-## 4: Our API should be able to retrieve all messages.
+## 4: Our API should be able to retrieve all messages. DONE
 
 As a user, I should be able to submit a GET request on the endpoint GET localhost:8080/messages.
 
